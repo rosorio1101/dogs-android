@@ -1,7 +1,5 @@
 package com.rosorio.data.repository.impl;
 
-import android.support.v4.media.MediaMetadataCompat;
-
 import com.rosorio.data.entity.Breed;
 import com.rosorio.data.repository.BreedRepository;
 import com.rosorio.data.repository.datasource.BreedDataSource;
@@ -18,7 +16,7 @@ import java.util.List;
 
 import io.reactivex.Observable;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.doReturn;
 
 /**
