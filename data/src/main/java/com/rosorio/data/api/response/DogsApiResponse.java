@@ -4,7 +4,7 @@ package com.rosorio.data.api.response;
  * Created by robertoosoriosanhueza on 16-03-18.
  */
 
-public class DogsApiResponse<T> {
+public abstract class DogsApiResponse<T> {
     private String status;
     private T message;
 

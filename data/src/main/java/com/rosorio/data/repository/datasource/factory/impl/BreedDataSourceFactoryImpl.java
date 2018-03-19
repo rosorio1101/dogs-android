@@ -1,6 +1,6 @@
 package com.rosorio.data.repository.datasource.factory.impl;
 
-import com.rosorio.data.api.DogsApi;
+import com.rosorio.data.api.DogBreedApi;
 import com.rosorio.data.repository.datasource.BreedDataSource;
 import com.rosorio.data.repository.datasource.factory.BreedDataSourceFactory;
 import com.rosorio.data.repository.datasource.remote.BreedRemoteDataSource;
@@ -13,7 +13,7 @@ public class BreedDataSourceFactoryImpl implements BreedDataSourceFactory {
 
     private BreedDataSource remoteDataSource;
 
-    public BreedDataSourceFactoryImpl(DogsApi api) {
+    public BreedDataSourceFactoryImpl(DogBreedApi api) {
         remoteDataSource = new BreedRemoteDataSource(api);
     }
 

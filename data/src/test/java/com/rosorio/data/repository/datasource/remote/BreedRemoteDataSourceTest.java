@@ -2,7 +2,8 @@ package com.rosorio.data.repository.datasource.remote;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.rosorio.data.api.DogsApi;
+import com.rosorio.data.api.DogBreedApi;
+import com.rosorio.data.api.response.AllBreedResponse;
 import com.rosorio.data.api.response.DogsApiResponse;
 import com.rosorio.data.entity.Breed;
 import com.rosorio.data.repository.datasource.BreedDataSource;
@@ -29,7 +30,7 @@ public class BreedRemoteDataSourceTest {
     BreedDataSource dataSource;
 
     @Mock
-    DogsApi api;
+    DogBreedApi api;
 
     @Before
     public void setUp() throws Exception {
@@ -45,7 +46,7 @@ public class BreedRemoteDataSourceTest {
     @Test
     public void findAllBreed_shouldReturnBreedList_WhenSuccess() throws Exception {
         Gson gson = new GsonBuilder().create();
-        DogsApiResponse<List<String>> response = gson.fromJson("{\n" +
+        AllBreedResponse response = gson.fromJson("{\n" +
                 "\t\"status\": \"success\",\n" +
                 "\t\"message\": [\n" +
                 "\t\t\"affenpinscher\",\n" +
@@ -129,7 +130,7 @@ public class BreedRemoteDataSourceTest {
                 "\t\t\"whippet\",\n" +
                 "\t\t\"wolfhound\"\n" +
                 "\t]\n" +
-                "}", DogsApiResponse.class);
+                "}", AllBreedResponse.class);
 
         when(api.getAllBreeds()).thenReturn(Observable.just(response));
 
