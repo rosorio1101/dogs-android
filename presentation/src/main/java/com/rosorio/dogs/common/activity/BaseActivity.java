@@ -34,6 +34,7 @@ public abstract class BaseActivity<P extends Presenter>
             isFirstInit = savedInstanceState.getBoolean(ARG_FIRST_INIT);
         }
         if (presenter != null) presenter.onViewAttached(this);
+
     }
 
     @Override

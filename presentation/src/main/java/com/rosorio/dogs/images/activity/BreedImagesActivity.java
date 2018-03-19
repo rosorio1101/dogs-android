@@ -39,10 +39,11 @@ public class BreedImagesActivity extends BaseActivity<BreedImagesPresenter> impl
 
         coordinatorLayout = findViewById(R.id.root_view);
 
-        toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar_app);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         rvImagesList = findViewById(R.id.rv_image_list);
 

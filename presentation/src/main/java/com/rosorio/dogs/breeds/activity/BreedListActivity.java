@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -35,7 +36,6 @@ public class BreedListActivity extends BaseActivity<BreedListPresenter> implemen
     LoadingFragment loadingFragment;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,12 +43,15 @@ public class BreedListActivity extends BaseActivity<BreedListPresenter> implemen
 
         coordinatorLayout = findViewById(R.id.root_view);
 
-        toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("Dogs");
+        toolbar = findViewById(R.id.toolbar_app);
         setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE |
+                ActionBar.DISPLAY_SHOW_HOME);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setTitle("Dogs");
+        getSupportActionBar().setHomeButtonEnabled(true);
 
         rvBreedList = findViewById(R.id.rv_breed_list);
 
