@@ -41,7 +41,7 @@ public class BreedImagesPresenterImpl extends BasePresenter<BreedImagesPresenter
     }
 
     @Override
-    public void showImages(String breedName) {
+    public void getImagesByBreedName(String breedName) {
         view.showLoading();
         useCase.execute(breedName)
                 .observeOn(androidScheduler)

@@ -49,7 +49,7 @@ public class FindAllBreedUseCaseTest {
 
         doReturn(Observable.just(breedList)).when(breedRepository).findAllBreeds();
 
-        Observable<List<BreedModel>> observable = useCase.execute();
+        Observable<List<BreedModel>> observable = useCase.execute(null);
 
         assertNotNull(observable);
 

@@ -12,7 +12,7 @@ import java.util.List;
 
 public interface BreedImagesPresenter extends Presenter<BreedImagesPresenter.View> {
 
-    void showImages(String breedName);
+    void getImagesByBreedName(String breedName);
 
     interface View extends Presenter.LoadingView, Presenter.ErrorView {
         void showBreedImages(List<BreedImageModel> list);
